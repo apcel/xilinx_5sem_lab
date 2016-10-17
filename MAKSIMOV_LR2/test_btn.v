@@ -27,8 +27,6 @@ BTN_FILTER filter(
 			rawButton,
 			clock,
 			filteredButton);
-//reg [15:0] i;
-//reg [1:0] j;
 
 initial begin
 		rawButton <= 0;
