@@ -20,33 +20,33 @@
 //////////////////////////////////////////////////////////////////////////////////
 module counter10k(
     input tick,
-	 input reset,
-    output reg reached);
+	 input run,
+    output reached);
 reg [15:0] internalCounter;
 reg [15:0] valueToCompareWith;
+reg clearInternal;
+
+wire filteredTick;
+wire clear;
+
 initial 
 	begin
 		valueToCompareWith <= 16'h000a; //44ns is 16'd10
 		//valueToCompareWith <= 16'h58C7; //44ns is 16'd10, so 1000000 / 44 is this
-		reached <= 0;
-		internalCounter <= 16'h0000;
+		clearInternal <=0; 	#1;
+		clearInternal <=1;	#1;
+		clearInternal <=0;	#1;
 	end
+	
 
-always @ (reset)
-	begin
-		internalCounter <= 16'h0000;
-		reached <= 0;
-	end
+assign countedNeededValue = internalCounter > valueToCompareWith;
+assign reached = countedNeededValue & run;
+assign filteredTick = tick & (~countedNeededValue) & run;
+assign clear = ~run | clearInternal;
 
-always @ (posedge tick)
-begin
-	if(~reset)
-		if(internalCounter < valueToCompareWith)//timeout was not reached
-			internalCounter = internalCounter + 1;
-		else//timeout was reached
-			reached <= 1;
-			
-end
-
-
+always @ (posedge filteredTick or posedge clear)
+	if(clear)
+		internalCounter = 16'h0000;
+	else
+		internalCounter = internalCounter + 1;	
 endmodule

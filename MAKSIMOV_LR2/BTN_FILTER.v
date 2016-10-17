@@ -23,16 +23,16 @@ module BTN_FILTER(
 	 input clockSource,
     output reg currentState
     );
-reg resetCounter;
-counter10k filterDelay(clockSource, resetCounter, sigChanged);
+reg runCounter;
+counter10k filterDelay(clockSource, runCounter, sigChanged);
 
 initial begin
 	currentState <= 0;
-	resetCounter <= 0;
+	runCounter <= 1;
 end
 
 always @ (rawButton)
-	resetCounter = ~(rawButton ^ currentState);
+	runCounter = rawButton ^ currentState;
 
 always @ (posedge sigChanged)
 	currentState = ~currentState;
