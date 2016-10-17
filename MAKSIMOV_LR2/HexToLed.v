@@ -20,14 +20,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 module HexToLed(
     input [3:0] x,
-    output reg [7:0] y
+    output [6:0] transformedY
     );
-//y[7] is dot
+reg [6:0]y;
 initial y <= 0;
 
+
+assign transformedY[0] = y[6];
+assign transformedY[1] = y[4];
+assign transformedY[2] = y[1];
+assign transformedY[3] = y[0];
+assign transformedY[4] = y[2];
+assign transformedY[5] = y[5];
+assign transformedY[6] = y[3];
+
 always @ (x)
-begin
-   case (Address)
+   case (x)
       4'b0000: y <= 7'b0001000;
       4'b0001: y <= 7'b1101101;
       4'b0010: y <= 7'b0100010;
@@ -50,6 +58,7 @@ begin
 
       default: y <= 7'b1111111;
    endcase
-end
+
+
 
 endmodule
