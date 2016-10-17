@@ -65,7 +65,7 @@
     <transform xil_pn:end_ts="1476706604" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1476706604">
       <status xil_pn:value="SuccessfullyRun"/>
     </transform>
-    <transform xil_pn:end_ts="1476721710" xil_pn:in_ck="-3268885940878492148" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1476721710">
+    <transform xil_pn:end_ts="1476722182" xil_pn:in_ck="-3268885940878492148" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1476722182">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BTN_FILTER.v"/>
@@ -92,7 +92,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1476721710" xil_pn:in_ck="-3268885940878492148" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1476721710">
+    <transform xil_pn:end_ts="1476722182" xil_pn:in_ck="-3268885940878492148" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1476722182">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BTN_FILTER.v"/>
@@ -107,7 +107,7 @@
       <outfile xil_pn:name="test_core.v"/>
       <outfile xil_pn:name="test_ctr64.v"/>
     </transform>
-    <transform xil_pn:end_ts="1476721711" xil_pn:in_ck="-3268885940878492148" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4329464001146266355" xil_pn:start_ts="1476721710">
+    <transform xil_pn:end_ts="1476722183" xil_pn:in_ck="-3268885940878492148" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4329464001146266355" xil_pn:start_ts="1476722182">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -119,9 +119,11 @@
       <outfile xil_pn:name="test_core_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1476721711" xil_pn:in_ck="6989335395031370020" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1913339669558251024" xil_pn:start_ts="1476721711">
+    <transform xil_pn:end_ts="1476722183" xil_pn:in_ck="6989335395031370020" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1913339669558251024" xil_pn:start_ts="1476722183">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_core_isim_beh.wdb"/>
