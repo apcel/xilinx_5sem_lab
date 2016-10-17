@@ -1,0 +1,8 @@
+[Inputs]
+rawButton
+[Outputs]
+sigChanged
+[BiDir]
+[ATTRIBUTES]
+VeriModel BTN_FILTER
+

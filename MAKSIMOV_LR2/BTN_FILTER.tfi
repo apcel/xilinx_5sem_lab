@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+BTN_FILTER instance_name (
+    .rawButton(rawButton), 
+    .sigChanged(sigChanged)
+    );
+
+
