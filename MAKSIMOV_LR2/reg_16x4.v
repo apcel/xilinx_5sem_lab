@@ -19,9 +19,12 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module reg_16x4(
-    input [4:0] Address,
-    output reg [4:0] Y
+    input [3:0] Address,
+    output reg [3:0] Y
     );
+initial begin
+	Y <= 4'h0;
+end
 always @(posedge Address)
    case (Address)
       4'b0000: Y <= 4'hc;
