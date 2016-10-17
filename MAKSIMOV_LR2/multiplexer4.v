@@ -25,6 +25,9 @@ module multiplexer4(
     );
 // <\w+?(\d)> => X[\1]  -- template to input // and minus 1 :(
 // <output>   => Y      -- template to output
+	initial
+		Y = X[0];
+	
    always @(Address, X)
       case (Address)
          2'b00: Y = X[0];
