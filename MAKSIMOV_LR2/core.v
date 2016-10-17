@@ -23,7 +23,7 @@ module core(
     input clr,
     output [3:0] NOM,
     output [1:0] BIT,
-    output [3:0] LE,
+    output [3:0] EL,
     output TX
     );
 wire [3:0] 	rg_a;
@@ -35,7 +35,7 @@ reg_16x4 rom(rg_a, rg_word);
 multiplexer4 bit_decipher(rg_word, bit_a, bit_word);
 assign NOM 	= rg_a;
 assign BIT 	= bit_a;
-assign LE	= rg_word;
+assign EL	= rg_word;
 assign TX	= bit_word;
 
 endmodule
