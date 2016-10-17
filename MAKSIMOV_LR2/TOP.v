@@ -21,14 +21,15 @@
 // ^[^/].*?(\w+)\s*:\s*(\w+).*?(\d)+.*?(\d)+.*  => \2put [\3:\4] \1,    -- vhd to v [bus]
 // ^[^/].*?(\w+)\s*:\s*(\w+).*?                 => \2put \1,            -- vhd to v [bus]
 module TOP(
-        input btnC,
-        input btnU,
-        output [7:0] seg,
-        output [7:0] led,
-        output [7:0] an,
-        output [1:0] sw
-			  );
-BTN_FILTER filter(btnC, sigRST);
-BTN_FILTER filter(btnU, sigCLK);
+			input clk,
+			input btnC,
+			input btnU,
+			output [7:0] seg,
+			output [0:0] led,
+			output [2:0] an
+		);
+BTN_FILTER RSTfilter(btnC, clk, sigRST);
+BTN_FILTER CLICKfilter(btnU, clk, sigCLICK);
+
 
 endmodule
