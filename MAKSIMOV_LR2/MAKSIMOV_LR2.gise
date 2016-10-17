@@ -30,6 +30,9 @@
     <file xil_pn:fileType="FILE_XST" xil_pn:name="BTN_FILTER.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="BTN_FILTER_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BTN_FILTER_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HexToLed.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="HexToLed.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="HexToLed.xst"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="TOP.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="TOP.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TOP.prj"/>
