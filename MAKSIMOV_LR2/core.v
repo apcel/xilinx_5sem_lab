@@ -38,7 +38,4 @@ assign BIT 	= bit_a;
 assign LE	= rg_word;
 assign TX	= bit_word;
 
-initial begin
-	
-end
 endmodule
