@@ -27,7 +27,7 @@ wire [3:0] 	LE;
 wire			TX;
 core coreToTest(hit, clr, NOM, BIT, LE, TX);
 initial begin
-	clr = 0;
+	clr = 0; hit = 0; #4;
     hit=1;#3;hit=0;#1; //0
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
@@ -98,14 +98,14 @@ initial begin
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
-	 clr = 1;
+	 clr = 1; #1;
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
-	 clr = 0;
+	 clr = 0; #1;
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
     hit=1;#3;hit=0;#1;
