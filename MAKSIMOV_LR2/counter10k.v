@@ -24,21 +24,18 @@ module counter10k(
     output reg reached);
 reg [15:0] internalCounter;
 reg [15:0] valueToCompareWith;
-reg outputted;
 initial 
 	begin
-		valueToCompareWith <= 16'h000a;
+		valueToCompareWith <= 16'h000a; //44ns is 16'd10
+		//valueToCompareWith <= 16'h58C7; //44ns is 16'd10, so 1000000 / 44 is this
 		reached <= 0;
 		internalCounter <= 16'h0000;
-		outputted <= 0;
-		//internal = internalCounter;
 	end
 
-always @ (posedge reset)
+always @ (reset)
 	begin
 		internalCounter <= 16'h0000;
 		reached <= 0;
-		outputted <= 0;
 	end
 
 always @ (posedge tick)
@@ -47,13 +44,8 @@ begin
 		if(internalCounter < valueToCompareWith)//timeout was not reached
 			internalCounter = internalCounter + 1;
 		else//timeout was reached
-			if(outputted)
-				reached <= 1;
-			else
-			begin
-				reached <= 1;
-				outputted <= 1;
-			end
+			reached <= 1;
+			
 end
 
 
