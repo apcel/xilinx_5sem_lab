@@ -38,4 +38,22 @@ impact_impact.xwbt
 #ignore OS noise
 
 Thumbs.db
-.DS_Store
+.DS_Store*.bld
+*.ng[cdr]
+*.p(a[dr]|cf|ptwx)
+*.bld
+*.pad
+*.par
+*.pcf
+*.ptwx
+*.spl
+*.sym
+*.tfi
+*.twr
+*.twx
+*.unroutes
+*.xpi
+*.map
+*.mrp
+*.ngm
+*.xrpt
