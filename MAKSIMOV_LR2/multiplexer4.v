@@ -19,18 +19,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module multiplexer4(
-    input [4:0] X,
-    input [2:0] Address,
+    input [3:0] X,
+    input [1:0] Address,
     output reg Y
     );
-// <\w+?(\d)> => X[\1]  -- template to input
+// <\w+?(\d)> => X[\1]  -- template to input // and minus 1 :(
 // <output>   => Y      -- template to output
-   always @(Address, X[1], X[2], X[3], X[4])
+   always @(Address, X)
       case (Address)
-         2'b00: Y = X[1];
-         2'b01: Y = X[2];
-         2'b10: Y = X[3];
-         2'b11: Y = X[4];
+         2'b00: Y = X[0];
+         2'b01: Y = X[1];
+         2'b10: Y = X[2];
+         2'b11: Y = X[3];
       endcase
 
 endmodule
