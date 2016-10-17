@@ -28,15 +28,11 @@ reg [5:0] internalCounter;
 assign rg_a = internalCounter[5:2];
 assign bit_a = internalCounter[1:0];
 
-initial 
-	begin
+initial
 		internalCounter <= 5'h00;
-	end
 
-always @ (posedge clr)
-	begin
+always @ (clr)
 		internalCounter <= 5'h00;
-	end
 
 always @ (posedge tick)
 	if(~clr)
