@@ -26,9 +26,19 @@ module core(
     output [3:0] LE,
     output TX
     );
-wire [3:0] rg_a;
-//wire ;
+wire [3:0] 	rg_a;
+wire [1:0] 	bit_a;
+wire [3:0] 	rg_word;
+wire			bit_word;
+ctr64 counter(hit, clr, rg_a, bit_a);
+reg_16x4 rom(rg_a, rg_word);
+multiplexer4 bit_decipher(rg_word, bit_a, bit_word);
+assign NOM 	= rg_a;
+assign BIT 	= bit_a;
+assign LE	= rg_word;
+assign TX	= bit_word;
 
-
-
+initial begin
+	
+end
 endmodule
