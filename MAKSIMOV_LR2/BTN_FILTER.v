@@ -31,7 +31,7 @@ initial begin
 	runCounter <= 1;
 end
 
-always @ (rawButton)
+always @ (rawButton or currentState)
 	runCounter = rawButton ^ currentState;
 
 always @ (posedge sigChanged)

@@ -30,6 +30,7 @@ module TOP(
 		);
 BTN_FILTER RSTfilter(btnC, clk, sigRST);
 BTN_FILTER CLICKfilter(btnU, clk, sigCLICK);
+core core(sigCLICK, sigRST, seg[7:4], seg[3:2], {seg[1:0], an}, led);
 
 
 endmodule
