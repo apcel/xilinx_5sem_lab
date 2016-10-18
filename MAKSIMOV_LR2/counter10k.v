@@ -31,8 +31,8 @@ wire clear;
 
 initial 
 	begin
-		valueToCompareWith <= 16'h000a; //44ns is 16'd10
-		//valueToCompareWith <= 16'h58C7; //44ns is 16'd10, so 1000000 / 44 is this
+		//valueToCompareWith <= 16'h000a; //44ns is 16'd10
+		valueToCompareWith <= 16'h66C7; //44ns is 16'd10, so 1000000 / 44 is this
 		clearInternal <=0; 	#1;
 		clearInternal <=1;	#1;
 		clearInternal <=0;	#1;
