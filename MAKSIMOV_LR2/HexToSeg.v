@@ -23,7 +23,7 @@ module HexToSeg(
     output [6:0] transformedY
     );
 reg [6:0]y;
-initial y <= 0;
+initial y <= 7'b1111111;
 
 
 assign transformedY[0] = y[6];

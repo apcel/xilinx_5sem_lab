@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    20:42:30 10/18/2016 
+// Create Date:    20:55:01 10/18/2016 
 // Design Name: 
-// Module Name:    ctr4 
+// Module Name:    DC3 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,12 +18,17 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ctr4(
-    input clk,
-    output reg [1:0] counter
+module DC3(
+    input [1:0] x,
+    output reg [2:0] y
     );
-initial counter <= 2'h0;
-always @(posedge clk)
-	counter <= counter + 1;
+initial y <= 2'h0;
+always @ (x)
+	case(x)
+		2'b00: y <= 3'h1;
+		2'b01: y <= 3'h2;
+		2'b10: y <= 3'h4;
+		2'b11: y <= 3'h0;
+	endcase
 
 endmodule
