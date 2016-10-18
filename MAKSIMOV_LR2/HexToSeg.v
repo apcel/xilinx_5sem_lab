@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module HexToLed(
+module HexToSeg(
     input [3:0] x,
     output [6:0] transformedY
     );
