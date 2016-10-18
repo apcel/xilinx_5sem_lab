@@ -24,7 +24,7 @@ module TOP(
 			input clk,
 			input btnC,
 			input btnU,
-			output [7:0] seg,
+			output [6:0] seg,
 			output [0:0] led,
 			output [2:0] an
 		);
