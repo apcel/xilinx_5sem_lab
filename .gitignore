@@ -60,3 +60,8 @@ Thumbs.db
 *.clk_rgn
 *.dly
 *.pwr
+*.bgn
+*.drc
+*.lpc
+*.rpt
+*.ut
