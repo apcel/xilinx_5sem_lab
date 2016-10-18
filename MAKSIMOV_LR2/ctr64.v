@@ -27,19 +27,15 @@ module ctr64(
 reg [5:0] internalCounter;
 assign rg_a = internalCounter[5:2];
 assign bit_a = internalCounter[1:0];
-reg rst;
-wire clear;
-assign clear = rst | clr;
 
 reg removeAssignmentWarning;
 
 initial
-begin
-rst <= 0; #1; rst <=1; #1; rst <= 0; #1;
-end
+	internalCounter <= 5'h00;
 
-always @ (posedge tick or posedge clear)
-	if(clear)
+
+always @ (posedge tick or posedge clr)
+	if(clr)
 		internalCounter <= 5'h00;
 	else
 		internalCounter <= internalCounter + 1;		
