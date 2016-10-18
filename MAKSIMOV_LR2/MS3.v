@@ -19,16 +19,16 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module MS3(
-    output [3:0] x0,
+    input [3:0] x0,
     input [3:0] x1,
     input [3:0] x2,
     input [1:0] adr,
     output [3:0] y
     );
 wire c0, c1, c2;
-assign c0 = ~adr[0] & ~adr[1];
-assign c1 = ~adr[0] & adr[1];
-assign c2 = adr[0] & ~adr[1];
+assign c0 = ~adr[0] 	& ~adr[1];
+assign c1 =  adr[0] 	& ~adr[1];
+assign c2 = ~adr[0] 	&  adr[1];
 wire [3:0]s0, s1, s2;
 assign s0 = {4{c0}};
 assign s1 = {4{c1}};
