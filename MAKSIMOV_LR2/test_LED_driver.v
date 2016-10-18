@@ -31,71 +31,71 @@ initial begin
 	x1 <= 4'h0;
 	x2 <= 4'h1;
 
-
-	clock=1;#1;clock=0;#3; //0
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3; //F
-   clock=1;#1;clock=0;#3; //0
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3; //F
-   clock=1;#1;clock=0;#3; //0
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3; //F
-   clock=1;#1;clock=0;#3; //0
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3;
-   clock=1;#1;clock=0;#3; //F
+				  clock=0;#3;
+	clock=1;#5;clock=0;#3; //0
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3; //F
+   clock=1;#5;clock=0;#3; //0
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3; //F
+   clock=1;#5;clock=0;#3; //0
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3; //F
+   clock=1;#5;clock=0;#3; //0
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3;
+   clock=1;#5;clock=0;#3; //F
 end
 
 endmodule
