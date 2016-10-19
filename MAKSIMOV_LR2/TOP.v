@@ -28,18 +28,15 @@ module TOP(
 			output [0:0] led,
 			output [2:0] an
 		);
-wire GrouND;
-reg clk_reg;
+wire GrouND, clk_reg;
 assign GrouND = 1'b0;
-initial
-	clk_reg <= 0;
-
+clkDivider divideClock(clk, clk_reg);
 BTN_FILTER RSTfilter(btnC, clk_reg, sigRST);
 BTN_FILTER CLICKfilter(btnU, clk_reg, sigCLICK);
 
 wire [3:0] 	NOM, BIT_w;
 wire [1:0] 	BIT;
-assign BIT_w = {GrouND, GrouND, BIT};
+assign BIT_w = {2'b00, BIT};
 wire [3:0] 	EL;
 wire			TX;
 
@@ -47,7 +44,12 @@ core core (sigCLICK, sigRST, NOM, BIT, EL, TX);
 LED_driver LED(clk_reg, NOM, BIT_w, EL, seg, an);
 assign led[0] = TX;
 
-always @(posedge clk)
-	clk_reg <= ~clk_reg;
 
+endmodule
+
+module clkDivider (input clocksource, output reg clk_reg);
+initial
+	clk_reg <= 0;
+always @(posedge clocksource)
+	clk_reg <= ~clk_reg;
 endmodule
