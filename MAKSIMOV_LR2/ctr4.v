@@ -31,7 +31,7 @@ always @(posedge clk)
 	if(clr)
 		counter <= 0;
 	else
-		counter <= counter + 1;
+		counter <= counter + 1'b1;
 	
 
 

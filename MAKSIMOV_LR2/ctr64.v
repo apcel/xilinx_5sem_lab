@@ -28,9 +28,7 @@ reg [5:0] internalCounter;
 assign rg_a = internalCounter[5:2];
 assign bit_a = internalCounter[1:0];
 
-reg removeAssignmentWarning;
-
-initial
+initial 
 	internalCounter <= 5'h00;
 
 
@@ -38,7 +36,7 @@ always @ (posedge tick or posedge clr)
 	if(clr)
 		internalCounter <= 5'h00;
 	else
-		internalCounter <= internalCounter + 1;		
+		internalCounter <= internalCounter + 1'b1;		
 
 
 endmodule
