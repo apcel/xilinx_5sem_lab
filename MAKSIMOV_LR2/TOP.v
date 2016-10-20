@@ -28,8 +28,6 @@ module TOP(
 			output [0:0] led,
 			output [2:0] an
 		);
-wire GrouND, clk_reg;
-assign GrouND = 1'b0;
 clkDivider divideClock(clk, clk_reg);
 BTN_FILTER RSTfilter(btnC, clk_reg, sigRST);
 BTN_FILTER CLICKfilter(btnU, clk_reg, sigCLICK);
@@ -43,8 +41,6 @@ wire			TX;
 core core (sigCLICK, sigRST, NOM, BIT, EL, TX);
 LED_driver LED(clk_reg, NOM, BIT_w, EL, seg, an);
 assign led[0] = TX;
-
-
 endmodule
 
 module clkDivider (input clocksource, output reg clk_reg);
