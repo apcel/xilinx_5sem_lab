@@ -1,52 +1,30 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    14:54:43 10/17/2016 
-// Design Name: 
-// Module Name:    counter10k 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module counter10k(
     input tick,
 	 input run,
-    output reached);
+    output countedNeededValue);
 reg [15:0] internalCounter;
-reg [15:0] valueToCompareWith;
-reg clearInternal;
+wire [15:0] valueToStartWith;
 
 wire filteredTick;
 wire clear;
 
+assign valueToStartWith = 16'h000a; //44ns is 16'd10
+//assign valueToStartWith = 16'hC350; 
+	//50000 tacts * 50MHz (clk frequency is divided by 2 earlier) * 2 (as we are using posedge)
+	//As result, we get 2ms. Should be enough
 initial 
-	begin
-		//valueToCompareWith <= 16'h000a; //44ns is 16'd10
-		valueToCompareWith <= 16'h82C7; //44ns is 16'd10, so 1000000 / 44 is this
-		clearInternal <=0; 	#1;
-		clearInternal <=1;	#1;
-		clearInternal <=0;	#1;
-	end
+	internalCounter <= valueToStartWith;
 	
 
-assign countedNeededValue = internalCounter > valueToCompareWith;
-assign reached = countedNeededValue & run;
-assign filteredTick = tick & (~countedNeededValue) & run;
-assign clear = ~run | clearInternal;
+assign countedNeededValue = (internalCounter == 16'h0000);
+assign filteredTick = tick & (~countedNeededValue);
+assign clear = ~run;
 
 always @ (posedge filteredTick or posedge clear)
 	if(clear)
-		internalCounter = 16'h0000;
+		internalCounter <= valueToStartWith;
 	else
-		internalCounter = internalCounter + 1;	
+		internalCounter <= internalCounter - 1'b1;	
 endmodule
