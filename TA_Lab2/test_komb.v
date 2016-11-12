@@ -27,60 +27,60 @@ reg [1:0] inp;
 //assign state = ctr[5:2];
 //assign inp = ctr[1:0];
 //always
-	//ctr <= #10 ctr + 1'b1;
+	//ctr <= #20 ctr + 1'b1;
 initial 
 begin
 	inp <= 2'b00; //a
-	state <= 0; #10;				//initial
-	state <= 4'b0001; #10;		//_b
-	state <= 4'b0010; #10;		//_d
-	state <= 4'b0110; #10;		//d
-	state <= 4'b0111; #10;		//bd
-	state <= 4'b0101; #10;		//b
-	state <= 4'b0100; #10;		//a
-	state <= 4'b1101; #10;		//ba
-	state <= 4'b1111; #10;		//x
-	state <= 4'b1110; #10;		//da
+	state <= 0; #20;				//initial
+	state <= 4'b0001; #20;		//_b
+	state <= 4'b0010; #20;		//_d
+	state <= 4'b0110; #20;		//d
+	state <= 4'b0111; #20;		//bd
+	state <= 4'b0101; #20;		//b
+	state <= 4'b0100; #20;		//a
+	state <= 4'b1101; #20;		//ba
+	state <= 4'b1111; #20;		//x
+	state <= 4'b1110; #20;		//da
 		state <= 0; inp <= 0;
-	#100;
+	#200;
 		inp <= 2'b01;//b
-	state <= 0; #10;				//initial
-	state <= 4'b0001; #10;		//_b
-	state <= 4'b0010; #10;		//_d
-	state <= 4'b0110; #10;		//d
-	state <= 4'b0111; #10;		//bd
-	state <= 4'b0101; #10;		//b
-	state <= 4'b0100; #10;		//a
-	state <= 4'b1101; #10;		//ba
-	state <= 4'b1111; #10;		//x
-	state <= 4'b1110; #10;		//da
+	state <= 0; #20;				//initial
+	state <= 4'b0001; #20;		//_b
+	state <= 4'b0010; #20;		//_d
+	state <= 4'b0110; #20;		//d
+	state <= 4'b0111; #20;		//bd
+	state <= 4'b0101; #20;		//b
+	state <= 4'b0100; #20;		//a
+	state <= 4'b1101; #20;		//ba
+	state <= 4'b1111; #20;		//x
+	state <= 4'b1110; #20;		//da
 		state <= 0; inp <= 0;
-	#100;
+	#200;
 		inp <= 2'b11;//c
-	state <= 0; #10;				//initial
-	state <= 4'b0001; #10;		//_b
-	state <= 4'b0010; #10;		//_d
-	state <= 4'b0110; #10;		//d
-	state <= 4'b0111; #10;		//bd
-	state <= 4'b0101; #10;		//b
-	state <= 4'b0100; #10;		//a
-	state <= 4'b1101; #10;		//ba
-	state <= 4'b1111; #10;		//x
-	state <= 4'b1110; #10;		//da
+	state <= 0; #20;				//initial
+	state <= 4'b0001; #20;		//_b
+	state <= 4'b0010; #20;		//_d
+	state <= 4'b0110; #20;		//d
+	state <= 4'b0111; #20;		//bd
+	state <= 4'b0101; #20;		//b
+	state <= 4'b0100; #20;		//a
+	state <= 4'b1101; #20;		//ba
+	state <= 4'b1111; #20;		//x
+	state <= 4'b1110; #20;		//da
 		state <= 0; inp <= 0;
-	#100;
+	#200;
 		inp <= 2'b10;//d
-	state <= 0; #10;				//initial
-	state <= 4'b0001; #10;		//_b
-	state <= 4'b0010; #10;		//_d
-	state <= 4'b0110; #10;		//d
-	state <= 4'b0111; #10;		//bd
-	state <= 4'b0101; #10;		//b
-	state <= 4'b0100; #10;		//a
-	state <= 4'b1101; #10;		//ba
-	state <= 4'b1111; #10;		//x
-	state <= 4'b1110; #10;		//da
-	#100;
+	state <= 0; #20;				//initial
+	state <= 4'b0001; #20;		//_b
+	state <= 4'b0010; #20;		//_d
+	state <= 4'b0110; #20;		//d
+	state <= 4'b0111; #20;		//bd
+	state <= 4'b0101; #20;		//b
+	state <= 4'b0100; #20;		//a
+	state <= 4'b1101; #20;		//ba
+	state <= 4'b1111; #20;		//x
+	state <= 4'b1110; #20;		//da
+	#200;
 	
 end	
 komb testig(
