@@ -1,0 +1,13 @@
+*/
+TOP_*
+*.prj
+*.xst
+*.tcl
+*.debug
+*.prj
+*.syr
+*.xrpt
+*.xml
+sch2HdlBatchFile
+*.jhd
+*.vf
