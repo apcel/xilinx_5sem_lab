@@ -30,8 +30,8 @@ module komb(
     output d_o,
     output b_o
     );
-assign r_o = x&d&~b&~i1&~i0|x&d&b&i1&~i0|x&d&b&~i1&i0|x&~d&b&~i1&~i0|r&x&~d&b&~i1&i0|r&x&d&b&~i1&~i0|r&d&~b&i1&~i0;
-assign x_o = ~i1&~i0|x&~i1&i0|~x&d&~i1&i0|x&i1&~i0|~x&b&i1&~i0;
-assign d_o = x&d&~i1|r&~d&~i1&i0|i1&~i0;
-assign b_o = x&b&~i1&~i0|~i1&i0|x&b&i1&~i0|r&d&~b&i1&~i0;
+assign r_o = (x & d & ~b & ~i1 & ~i0) | (x & d & b & i1 & ~i0) | (x & d & b & ~i1 & i0) | (x & ~d & b & ~i1 & ~i0) | (r & x & ~d & b & ~i1 & i0) | (r & x & d & b & ~i1 & ~i0) | (r & d & ~b & i1 & ~i0);
+assign x_o = (~i1 & ~i0) | (x & ~i1 & i0) | (~x & d & ~i1 & i0) | (x & i1 & ~i0) | (~x & b & i1 & ~i0);
+assign d_o = (x & d & ~i1) | (r & ~d & ~i1 & i0) | (i1 & ~i0);
+assign b_o = (x & b & ~i1 & ~i0) | (~i1 & i0) | (x & b & i1 & ~i0) | (r & d & ~b & i1 & ~i0);
 endmodule
