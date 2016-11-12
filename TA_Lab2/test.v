@@ -29,9 +29,9 @@ wire [3:0] state;
 		.X0(  x0  ), 
 		.FD_CLK(  clk  ), 
 		.Y(  y  ),
-		.xo_(  state[0]  ), 
+		.xo_(  state[2]  ), 
 		.do_(  state[1]  ), 
-		.bo_(  state[2]  ), 
+		.bo_(  state[0]  ), 
 		.ro_(  state[3]  )
    );
 
