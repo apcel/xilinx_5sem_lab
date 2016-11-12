@@ -30,7 +30,7 @@ reg [1:0] inp;
 	//ctr <= #10 ctr + 1'b1;
 initial 
 begin
-	inp <= 0'b00; //a
+	inp <= 2'b00; //a
 	state <= 0; #10;				//initial
 	state <= 4'b0001; #10;		//_b
 	state <= 4'b0010; #10;		//_d
@@ -43,7 +43,7 @@ begin
 	state <= 4'b1110; #10;		//da
 		state <= 0; inp <= 0;
 	#100;
-		inp <= 0'b01;//b
+		inp <= 2'b01;//b
 	state <= 0; #10;				//initial
 	state <= 4'b0001; #10;		//_b
 	state <= 4'b0010; #10;		//_d
@@ -56,7 +56,7 @@ begin
 	state <= 4'b1110; #10;		//da
 		state <= 0; inp <= 0;
 	#100;
-		inp <= 0'b11;//c
+		inp <= 2'b11;//c
 	state <= 0; #10;				//initial
 	state <= 4'b0001; #10;		//_b
 	state <= 4'b0010; #10;		//_d
@@ -69,7 +69,7 @@ begin
 	state <= 4'b1110; #10;		//da
 		state <= 0; inp <= 0;
 	#100;
-		inp <= 0'b10;//d
+		inp <= 2'b10;//d
 	state <= 0; #10;				//initial
 	state <= 4'b0001; #10;		//_b
 	state <= 4'b0010; #10;		//_d
